@@ -19,7 +19,7 @@ def main():
         create_torrc()
     download_tor_bridges()
     run_tor()
-    sys.exit(0)
+    sys.exit(status=0)
 
 
 def download_tor():
@@ -36,7 +36,7 @@ def download_tor():
 
     except Exception as exception:
         print(exception)
-        sys.exit(1)
+        sys.exit(status=1)
 
 
 def create_torrc():
@@ -55,7 +55,7 @@ UseBridges 1
 """)
     except Exception as exception:
         print(exception)
-        sys.exit(2)
+        sys.exit(status=2)
 
 
 def download_tor_bridges():
@@ -67,7 +67,7 @@ def download_tor_bridges():
                     file.write(f"Bridge {bridge}\n")
     except Exception as exception:
         print(exception)
-        sys.exit(3)
+        sys.exit(status=3)
 
 
 def run_tor():
@@ -75,7 +75,7 @@ def run_tor():
         subprocess.Popen(args=["tor", "-f", "torrc"], creationflags=subprocess.DETACHED_PROCESS)
     except Exception as exception:
         print(exception)
-        sys.exit(4)
+        sys.exit(status=4)
 
 
 if __name__ == "__main__":
