@@ -1,6 +1,6 @@
 [project]
 name = "bridget"
-version = "1.0.0"
+version = "1.1.0"
 description = "get tor bridges"
 requires-python = ">=3.13"
 dependencies = []
