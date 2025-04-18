@@ -20,5 +20,5 @@ jobs:
         uses: actions/upload-artifact@v4
         with:
           name: BridGet
-          path: build/main.exe
+          path: build/BridGet.exe
           include-hidden-files: true
