@@ -16,6 +16,7 @@ jobs:
           nuitka-version: main
           script-name: main.py
           mode: app
+          output-file: BridGet.exe
       - name: Upload Artifact
         uses: actions/upload-artifact@v4
         with:
